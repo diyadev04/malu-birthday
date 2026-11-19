@@ -1,0 +1,69 @@
+.cute-ambient-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.pink-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.orb-1 {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, #FFCCD8 0%, rgba(255, 179, 198, 0.3) 60%, transparent 80%);
+  top: -80px;
+  right: -80px;
+  animation: orbSway 18s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, #F2E8FF 0%, rgba(229, 212, 255, 0.3) 60%, transparent 80%);
+  bottom: 12%;
+  left: -80px;
+  animation: orbSway 22s ease-in-out infinite alternate-reverse;
+}
+
+.orb-3 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, #FFE5EC 0%, rgba(255, 204, 216, 0.35) 60%, transparent 80%);
+  top: 48%;
+  right: 12%;
+  animation: orbSway 20s ease-in-out infinite alternate;
+}
+
+@keyframes orbSway {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(35px, 40px) scale(1.1); }
+}
+
+/* Subtle tiny floating doodles */
+.cute-doodle {
+  position: absolute;
+  font-size: 1.25rem;
+  opacity: 0.45;
+  user-select: none;
+  animation: doodleFloat 16s ease-in-out infinite alternate;
+  filter: drop-shadow(0 2px 4px rgba(255, 92, 141, 0.15));
+}
+
+.d-1 { top: 16%; left: 7%; animation-duration: 15s; }
+.d-2 { top: 35%; right: 8%; animation-duration: 19s; font-size: 1.4rem; }
+.d-3 { top: 60%; left: 5%; animation-duration: 17s; color: #F59E0B; }
+.d-4 { top: 76%; right: 9%; animation-duration: 21s; }
+.d-5 { top: 88%; left: 12%; animation-duration: 18s; }
+.d-6 { top: 7%; right: 26%; animation-duration: 23s; font-size: 1.5rem; color: var(--strawberry-pink); }
+
+@keyframes doodleFloat {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-22px) rotate(14deg); }
+}

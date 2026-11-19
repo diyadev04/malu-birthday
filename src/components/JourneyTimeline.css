@@ -1,0 +1,354 @@
+.story-section {
+  padding: 5rem 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.story-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.scrapbook-timeline-list {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Subtle pink dashed stitch line */
+.stitch-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-image: linear-gradient(to bottom, var(--strawberry-pink) 60%, transparent 40%);
+  background-size: 2px 14px;
+}
+
+.story-row {
+  position: relative;
+  display: flex;
+  margin-bottom: 3.5rem;
+  width: 100%;
+}
+
+.story-left {
+  justify-content: flex-start;
+}
+
+.story-right {
+  justify-content: flex-end;
+}
+
+/* Node stamp */
+.story-pin-node {
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 46px;
+  background: #FFFFFF;
+  border: 2px solid var(--soft-blush);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 4px 15px rgba(255, 92, 141, 0.18);
+  font-size: 1.35rem;
+  transition: transform 0.3s ease;
+}
+
+.story-row:hover .story-pin-node {
+  transform: translateX(-50%) scale(1.15) rotate(8deg);
+  border-color: var(--strawberry-pink);
+}
+
+/* Card */
+.story-card {
+  position: relative;
+  width: calc(50% - 45px);
+  background: #FFFFFF;
+  border: 1.5px solid var(--soft-blush);
+  border-radius: 24px;
+  padding: 2.2rem 1.8rem 1.6rem;
+  box-shadow: 0 10px 30px rgba(255, 92, 141, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(255, 92, 141, 0.2);
+  border-color: var(--baby-pink);
+}
+
+.story-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.story-chapter-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--strawberry-pink);
+}
+
+.story-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.76rem;
+  color: var(--berry-light);
+}
+
+.story-item-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--berry-dark);
+  margin-bottom: 0.2rem;
+}
+
+.story-handwritten-tag {
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  color: var(--strawberry-pink);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Polaroid Box */
+.story-polaroid-box {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bg-pink-soft);
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 6px 20px rgba(255, 92, 141, 0.15);
+  margin-bottom: 1rem;
+}
+
+.story-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.story-polaroid-box:hover .story-img {
+  transform: scale(1.05);
+}
+
+.story-photo-view-cue {
+  position: absolute;
+  inset: 0;
+  background: rgba(90, 28, 56, 0.45);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.story-polaroid-box:hover .story-photo-view-cue {
+  opacity: 1;
+}
+
+.story-hand-note {
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 1.45rem;
+  color: var(--strawberry-pink);
+  margin-bottom: 0.8rem;
+  line-height: 1.35;
+}
+
+.story-description {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.94rem;
+  line-height: 1.75;
+  color: var(--berry-soft);
+  margin-bottom: 1.2rem;
+}
+
+.story-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px dashed rgba(255, 179, 198, 0.5);
+  padding-top: 0.8rem;
+}
+
+.btn-story-edit-photo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  border: 1px dashed var(--soft-blush);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--berry-soft);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-story-edit-photo:hover {
+  background: var(--pale-pink);
+  color: var(--strawberry-pink);
+}
+
+.story-edit-field {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.story-input {
+  flex: 1;
+  padding: 0.35rem 0.6rem;
+  border: 1.5px solid var(--soft-blush);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.story-save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--strawberry-pink);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Lightbox Modal */
+.journal-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(90, 28, 56, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.journal-lightbox-content {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 24px;
+  max-width: 620px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(90, 28, 56, 0.3);
+  animation: modalPop 0.35s ease;
+  border: 2px solid var(--soft-blush);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--soft-blush);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: var(--berry-dark);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+  background: var(--pale-pink);
+  color: var(--strawberry-pink);
+  transform: rotate(90deg);
+}
+
+.lightbox-img-wrapper {
+  width: 100%;
+  max-height: 380px;
+  overflow: hidden;
+}
+
+.lightbox-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lightbox-text-pane {
+  padding: 1.8rem 2.2rem;
+  text-align: center;
+}
+
+.lightbox-stamp {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.lightbox-text-pane h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+  color: var(--berry-dark);
+  margin-bottom: 0.3rem;
+}
+
+.lightbox-note {
+  font-family: 'Caveat', cursive;
+  font-size: 1.55rem;
+  color: var(--strawberry-pink);
+  margin-bottom: 0.8rem;
+}
+
+.lightbox-desc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--berry-soft);
+}
+
+@media (max-width: 820px) {
+  .stitch-line {
+    left: 24px;
+  }
+  .story-pin-node {
+    left: 24px;
+  }
+  .story-row {
+    justify-content: flex-end;
+  }
+  .story-card {
+    width: calc(100% - 55px);
+  }
+}

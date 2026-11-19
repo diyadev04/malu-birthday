@@ -1,0 +1,277 @@
+.journal-hero-section {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6.5rem 1.5rem 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.journal-hero-container {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+/* Left text block */
+.hero-mini-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-pink);
+  padding: 0.32rem 0.95rem;
+  border-radius: 999px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--strawberry-pink);
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px rgba(255, 92, 141, 0.1);
+}
+
+.mini-tag-dot {
+  font-size: 0.95rem;
+}
+
+.hero-diary-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 5.5vw, 4.3rem);
+  font-weight: 700;
+  color: var(--berry-dark);
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+
+.heading-highlight {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(3.2rem, 6.5vw, 5.2rem);
+  color: var(--strawberry-pink);
+  display: block;
+  margin-top: -0.2rem;
+}
+
+.hero-diary-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  color: var(--berry-soft);
+  margin-bottom: 1.2rem;
+}
+
+.hero-diary-lead {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.04rem;
+  color: var(--berry-soft);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+.hero-diary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 2.2rem;
+}
+
+.btn-journal-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #FF6E99 0%, #FF5C8D 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 2rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(255, 92, 141, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-journal-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 92, 141, 0.5);
+}
+
+.btn-journal-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #FFFFFF;
+  border: 1.5px solid var(--soft-blush);
+  color: var(--berry-dark);
+  border-radius: 999px;
+  padding: 0.9rem 2rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(255, 92, 141, 0.08);
+  transition: all 0.25s ease;
+}
+
+.btn-journal-secondary:hover {
+  background: var(--pale-pink);
+  border-color: var(--strawberry-pink);
+  color: var(--strawberry-pink);
+  transform: translateY(-2px);
+}
+
+.hero-micro-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.micro-tag {
+  background: #FFFFFF;
+  border: 1.5px solid var(--soft-blush);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--berry-soft);
+  box-shadow: 0 2px 6px rgba(255, 92, 141, 0.06);
+}
+
+/* Right Pinterest Visual */
+.hero-diary-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.pinterest-photo-card {
+  position: relative;
+  max-width: 380px;
+  width: 100%;
+}
+
+.polaroid-frame-box {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 1rem 1rem 1.6rem;
+  box-shadow: 
+    0 16px 40px rgba(255, 92, 141, 0.18),
+    0 2px 10px rgba(92, 29, 54, 0.06);
+  border: 2px solid var(--soft-blush);
+  transform: rotate(1.5deg);
+  transition: transform 0.4s ease;
+}
+
+.pinterest-photo-card:hover .polaroid-frame-box {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.hero-polaroid-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: 50% 12%;
+  border-radius: 14px;
+  display: block;
+}
+
+.polaroid-hand-caption {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: 'Caveat', cursive;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--strawberry-pink);
+}
+
+/* Attached Sticky Note */
+.attached-sticky-note {
+  position: absolute;
+  bottom: -22px;
+  left: -24px;
+  background: #FFFDFE;
+  border: 1.5px solid var(--soft-blush);
+  border-radius: 10px;
+  padding: 1.1rem 1.4rem 1rem;
+  box-shadow: 0 10px 25px rgba(255, 92, 141, 0.16);
+  transform: rotate(-5deg);
+  max-width: 230px;
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+.pinterest-photo-card:hover .attached-sticky-note {
+  transform: rotate(-3deg) translateY(-4px);
+}
+
+.sticky-pin {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+}
+
+.sticky-handwriting {
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: var(--berry-dark);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Scroll cue */
+.hero-scroll-cue {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--berry-light);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.hero-scroll-cue:hover {
+  color: var(--strawberry-pink);
+}
+
+.scroll-cue-text {
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.scroll-cue-arrow {
+  animation: bounceArrow 2s infinite;
+}
+
+@keyframes bounceArrow {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(5px); }
+  60% { transform: translateY(2px); }
+}
+
+@media (max-width: 860px) {
+  .journal-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  .hero-diary-lead {
+    margin: 0 auto 2rem;
+  }
+  .hero-diary-actions, .hero-micro-notes {
+    justify-content: center;
+  }
+  .attached-sticky-note {
+    left: 10px;
+    bottom: -15px;
+  }
+}

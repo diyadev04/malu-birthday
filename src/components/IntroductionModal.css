@@ -1,0 +1,183 @@
+.open-screen-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(92, 29, 54, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.open-screen-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 2px solid var(--soft-blush);
+  border-radius: 28px;
+  padding: 3.5rem 2.5rem 2.8rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 
+    0 20px 50px rgba(255, 92, 141, 0.18),
+    0 4px 15px rgba(255, 179, 198, 0.25);
+  animation: cardEntrance 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes cardEntrance {
+  from { transform: scale(0.9) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Minimal envelope doodle */
+.minimal-envelope-doodle {
+  margin: 0 auto 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.envelope-icon-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  background: var(--pale-pink);
+  border: 2px dashed var(--baby-pink);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.open-screen-card:hover .envelope-icon-wrap {
+  transform: rotate(-5deg) scale(1.06);
+}
+
+.envelope-doodle-icon {
+  font-size: 2.6rem;
+}
+
+.envelope-heart-stamp {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 1.25rem;
+  color: var(--strawberry-pink);
+  font-weight: 700;
+}
+
+.unfolding .envelope-icon-wrap {
+  transform: scale(1.2) rotate(8deg);
+  opacity: 0.6;
+}
+
+.pssst-text {
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--strawberry-pink);
+  margin-bottom: 0.4rem;
+}
+
+.teaser-phrase {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--berry-dark);
+  margin-bottom: 2rem;
+  line-height: 1.35;
+}
+
+.btn-open-envelope {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #FF6E99 0%, #FF5C8D 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 2.4rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(255, 92, 141, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-open-envelope:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 25px rgba(255, 92, 141, 0.5);
+}
+
+/* Revealed state */
+.revealed-greeting-box {
+  animation: revealFade 0.5s ease-out;
+}
+
+@keyframes revealFade {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.doodle-flower-top {
+  display: block;
+  font-size: 2rem;
+  color: var(--strawberry-pink);
+  margin-bottom: 0.8rem;
+}
+
+.birthday-cheer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--berry-dark);
+  letter-spacing: 0.5px;
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+
+.pretty-girl-text {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--strawberry-pink);
+  margin-bottom: 1rem;
+}
+
+.greeting-subtext {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  color: var(--berry-soft);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btn-enter-diary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--pale-pink);
+  border: 1.5px solid var(--soft-blush);
+  color: var(--strawberry-pink);
+  border-radius: 999px;
+  padding: 0.85rem 2.2rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-enter-diary:hover {
+  background: var(--soft-blush);
+  transform: translateY(-2px);
+}
